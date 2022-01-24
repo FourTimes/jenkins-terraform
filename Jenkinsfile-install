@@ -37,14 +37,14 @@ pipeline {
         stage('TERRAFORM PLAN') {
             steps {
                 sh '''
-                    terraform plan
+                    terraform plan -var-file=prod-config.tfvars
                 '''
             } 
         }
         stage('TERRAFORM APPLY') {
             steps {
                 sh '''
-                    terraform apply -auto-approve
+                    terraform apply -auto-approve -var-file=prod-config.tfvars
                 '''
             } 
         }
