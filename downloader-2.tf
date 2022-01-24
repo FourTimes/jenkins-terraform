@@ -1,6 +1,6 @@
 module "downloader-az2" {
   source               = "./module/aws-ec2-instance"
-  ami                  = "ami-04505e74c0741db8d"
+  ami                  = "ami-0d43d465e2051057f"
   availability_zone    = "us-east-1b"
   instance_type        = "c4.xlarge"
   key_name             = "key"
