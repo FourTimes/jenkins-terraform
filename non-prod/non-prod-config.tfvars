@@ -1,1 +1,0 @@
-vpc_id="vpc-00aa81e5bd49a0593"

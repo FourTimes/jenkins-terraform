@@ -1,6 +1,6 @@
 module "SA_REWEB_AZ2" {
 
-  source               = "../module/aws-ec2-instance"
+  source               = "./module/aws-ec2-instance"
   ami                  = "ami-06acd7cbe65da0fde"
   availability_zone    = "us-east-1b"
   instance_type        = "c4.xlarge"
