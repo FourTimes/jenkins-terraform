@@ -6,31 +6,45 @@ pipeline {
         REGION                = 'us-east-1'
     }      
     stages {
-        stage('ANSIBLE VERSION') {
+        stage('FETCH BINARY') {
             steps {
                 sh '''
-                    ansible --version
+                    sleep 5
                 '''
             } 
         }
-        stage('BINARY DOWNLOAD') {
+        stage('INSTALLING AND CONFIGURING WEBSERVER') {
             steps {
                 sh '''
-                    ansible-playbook binary.yml -b
+                    sleep 5
                 '''
             } 
         }
-        stage('PACKEGE INSTALLATION') {
+        stage('INSTALLING AND CONFIGURING WCF API') {
             steps {
                 sh '''
-                    ansible-playbook install.yml -b
+                    sleep 5
                 '''
             } 
         }
-        stage('SERVICE START') {
+        stage('INSTALLING AND CONFIGURING DOWNLOADER') {
             steps {
                 sh '''
-                    ansible-playbook service.yml -b
+                    sleep 5
+                '''
+            } 
+        }
+        stage('BATS TESTING') {
+            steps {
+                sh '''
+                    sleep 5
+                '''
+            } 
+        }
+       stage('SENDING RESULTS') {
+            steps {
+                sh '''
+                    sleep 5
                 '''
             } 
         }
