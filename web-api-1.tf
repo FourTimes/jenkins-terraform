@@ -2,7 +2,7 @@ module "web-api-az1" {
   source               = "./module/aws-ec2-instance"
   ami                  = "ami-0d43d465e2051057f"
   availability_zone    = "us-east-1a"
-  instance_type        = "c4.xlarge"
+  instance_type        = "t2.micro"
   key_name             = "key"
   subnet_id            = "subnet-0a3f2b582374a501d"
   vpc_id               = data.aws_vpc.vpc_id.id
