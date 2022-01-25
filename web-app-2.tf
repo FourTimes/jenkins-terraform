@@ -3,7 +3,7 @@ module "SA_REWEB_AZ2" {
   source               = "./module/aws-ec2-instance"
   ami                  = "ami-0d43d465e2051057f"
   availability_zone    = "us-east-1b"
-  instance_type        = "c4.xlarge"
+  instance_type        = "t2.micro"
   key_name             = "key"
   subnet_id            = "subnet-00e3ebcc52c45a7e6"
   vpc_id               = data.aws_vpc.vpc_id.id
