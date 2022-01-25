@@ -7,4 +7,5 @@
     ansible.builtin.package:
       name:
         - apache2
+        - unzip
       state: latest
