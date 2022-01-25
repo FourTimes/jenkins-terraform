@@ -13,6 +13,13 @@ pipeline {
                 '''
             } 
         }
+        stage('BINARY DOWNLOAD') {
+            steps {
+                sh '''
+                    ansible-playbook binary.yml -b
+                '''
+            } 
+        }
         stage('PACKEGE INSTALLATION') {
             steps {
                 sh '''
