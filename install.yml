@@ -2,6 +2,8 @@
 - hosts: all
   tasks:
   - name: Install the latest version of Apache
+    shell: sudo apt update
+  - name: Install the latest version of Apache
     ansible.builtin.package:
       name:
         - httpd
