@@ -1,0 +1,31 @@
+pipeline {
+    agent any 
+     environment {
+        AWS_ACCESS_KEY_ID     = credentials('ACCESS_KEY')
+        AWS_SECRET_ACCESS_KEY = credentials('SECRET_KEY')
+        REGION                = 'us-east-1'
+    }      
+    stages {
+        stage('ANSIBLE VERSION') {
+            steps {
+                sh '''
+                    ansible --version
+                '''
+            } 
+        }
+        stage('PACKEGE INSTALLATION') {
+            steps {
+                sh '''
+                    ansible-playbook install.yml -b
+                '''
+            } 
+        }
+        stage('SERVICE START') {
+            steps {
+                sh '''
+                    ansible-playbook service.yml -b
+                '''
+            } 
+        }
+    }
+}
