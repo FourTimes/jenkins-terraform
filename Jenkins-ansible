@@ -9,42 +9,42 @@ pipeline {
         stage('FETCH BINARY') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
         stage('INSTALLING AND CONFIGURING WEBSERVER') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
         stage('INSTALLING AND CONFIGURING WCF API') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
         stage('INSTALLING AND CONFIGURING DOWNLOADER') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
         stage('BATS TESTING') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
        stage('SENDING RESULTS') {
             steps {
                 sh '''
-                    sleep 5
+                    sleep 20
                 '''
             } 
         }
