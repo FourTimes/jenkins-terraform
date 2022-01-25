@@ -6,5 +6,5 @@
   - name: Install the latest version of Apache
     ansible.builtin.package:
       name:
-        - httpd
+        - apache2
       state: latest
